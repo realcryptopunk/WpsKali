@@ -32,7 +32,7 @@ wget -qO- 'http://127.0.0.1:8080/' | gawk -v IGNORECASE=1 -v RS='</title' 'RT{gs
 -Run a scan and find the vulnerabilities in your site 
 -wpscan --url http://127.0.0.1:8080 --api-token YOUR_API_TOKEN
 
-<img src="http://g.recordit.co/ObDimoFIKZ.gif" width=800>
+<img src="http://g.recordit.co/ObDimoFIKZ.gif" width=750>
 
 # Assignment 7
 
@@ -46,9 +46,29 @@ Steps:
 -Go to posts
 -create a new post or edit
 - add some script to the title of the post and post it
-- navigate to the main page 
+- navigate to post
 
-<img src="http://g.recordit.co/0kTGV1sT0H.gif" width=800>
+<img src="http://g.recordit.co/0kTGV1sT0H.gif" width=750>
 
-2. XSS v
+2. XSS vulnerability in Page edit
 
+--adding a script to the title of a page allows us to exploit an XSS vulnerability. 
+
+Steps: 
+-Go to posts
+-create a new page or edit 
+- add some script to the title of the post and post it
+- Click to view page
+<img src="http://g.recordit.co/FZ0y0VBDPP.gif" width=750>
+
+3. XSS Youtube URL embed 
+
+--embeding a script into a Youtube Url allows us to exploit yet another XSS vulnerability.
+
+Steps: 
+-Go to posts
+-create a new page or edit 
+- Use this script to embed an alert within a Youtube URL
+- "[embed src='https://youtube.com/embed/457\x3csvg onload=alert(911)\x3e'[/embed]"
+- Click to view page
+<img src="http://g.recordit.co/8Gv1unKVOq.gif" width=750>
