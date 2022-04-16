@@ -1,5 +1,5 @@
 # WpsKali & WPSCAN
-Docker Implementation 
+Docker Implementation Lab 7 
 
 ## Install Docker
 - Using the installer at this [link](https://docs.docker.com/docker-for-mac/install/) installs all the components necessary for this exercise.
@@ -31,3 +31,24 @@ wget -qO- 'http://127.0.0.1:8080/' | gawk -v IGNORECASE=1 -v RS='</title' 'RT{gs
 -Create account at wpscan.com and obtain an API TOKEN
 -Run a scan and find the vulnerabilities in your site 
 -wpscan --url http://127.0.0.1:8080 --api-token YOUR_API_TOKEN
+
+<img src="http://g.recordit.co/ObDimoFIKZ.gif" width=800>
+
+# Assignment 7
+
+Exploits Found: 
+
+1. XSS Vulnerability in Post Edit Page
+
+--adding a script to the title of a post allows us to exploit an XSS vulnerability. 
+
+Steps: 
+-Go to posts
+-create a new post or edit
+- add some script to the title of the post and post it
+- navigate to the main page 
+
+<img src="http://g.recordit.co/0kTGV1sT0H.gif" width=800>
+
+2. XSS v
+
